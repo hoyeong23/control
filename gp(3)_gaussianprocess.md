@@ -1,5 +1,5 @@
 
-Gaussian Process(2) - The Standard Linear Model
+Gaussian Process(3) - GP Regression
 =============
 
 해당 글의 전체적인 내용은 책 Gaussian Process for Machine Learning (Carl Edward Rasmussen)에서 가져왔다.  
