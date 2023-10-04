@@ -82,7 +82,7 @@ zlabel('Probability Density');
 ```
 
 <p align="center">
-  <img src="/picture/multivariate_dist.png">
+  <img src="/picture/multivariate_dist.png"/>   
   그림 (1) 서로 독립적인 정규분포를 따르는 weight 분포
 </p>
 
@@ -133,18 +133,25 @@ zlabel('Probability Density');
 코드에 의한 Likelihood 분포는 아래 그림과 같다.   
 우선 평면 상에서 색깔의 분포를 확인해보자.
 
-(평면 Likelihood 그림 (2) 추가)
+<p align="center">
+  <img src="/picture/2d_likelihood.png">
+  그림 (2) 2D Likelihood 분포
+</p>
 
 노란색에 가까울 수록 값이 크고, 파란색에 가까울 수록 값이 작다.   
 위 분포를 기울여서 3차원으로 보면 아래와 같다.
 
-(입체 Likelihood 그림 (3) 추가)
+<p align="center">
+  <img src="/picture/3d_likelihood.png">
+  그림 (3) 3D Likelihood 분포
+</p>
 
 이전 장에서 언급했던 것처럼 Likelihood 값이 높을 수록 데이터가 추출되었을 확률이 높은 것으로 본다.   
 높은 Likelihood 값을 갖도록 하는 $w_1, w_2$를 weight로 가지는 함수가 데이터에 적합하다는 것이다.   
 
 그림 (2, 3)에 따르면 Likelihood가 가장 높을 때의 weight는 $w_1 = -1.65, w_2=0.95$이다.   
 즉, 우리가 추정하는 Linear Model은 $f(x)=-1.65+0.95x$의 형태가 주어진 데이터에 적합한 모델일 확률이 가장 높다는 것이다.   
+
 여기서 Linear Model의 parameter가 확률 분포로 나타나는 것은 $y$ 데이터가 실제 값이 아닌 Noise가 포함되어 있다고 가정되었기 때문이다.   
 이 때문에 Noise의 분산에 따라서 parameter 분포의 형태도 충분히 달라질 수 있다.   
 
@@ -154,6 +161,7 @@ zlabel('Probability Density');
 이번엔 Posterior Probability를 분포로 그려보자.
 Posterior Probability는 Likelihood와 Prior Probability의 곱이다.   
 즉, 함수와 데이터의 적합성(Likelihood)과 데이터가 관찰되기 전 확률(Prior)의 곱이다.    
+
 상수 성분을 모두 제거하고 변수에 대해서만 함수를 가져오면 간단하게 분포를 나타낼 수 있다.    
 아래 식과 같이 특정 함수에 비례하는 것으로 Posterior 분포를 표현할 수 있다.   
 
@@ -204,12 +212,20 @@ zlabel('Posterior Distribution');
 ```
 
 평면 상의 분포를 그리면 아래 그림과 같다.   
-(평면 Posterior 그림(4) 추가)
+
+<p align="center">
+  <img src="/picture/2d_posterior.png">
+  그림 (4) 2D Posterior 분포
+</p>
+
 이것 또한 노란색일 수록 확률 값이 높고, 파란색일 수록 확률 값이 낮다.
 
 위 분포를 기울여서 3차원으로 보면 아래 그림과 같다.   
 
-(입체 Posterior 그림(5) 추가)
+<p align="center">
+  <img src="/picture/3d_posterior.png">
+  그림 (5) 3D Posterior 분포
+</p>
 
 위 그림을 통해서 적절한 weight를 추정하면 $w_1 = -1.2, w_2 = 0.9$ 이다.   
 즉, Linear Model은 $f(x)=-1.2+0.9x$의 형태가 데이터에 적합한 모델일 확률이 가장 높다는 것이다.   
@@ -266,7 +282,10 @@ legend('Linear Model', 'Mean of predictive distribution', 'Variance -(95%)', 'Va
 
 위 코드를 이용해서 분포를 그리면 아래와 같다.
 
-(Linear Regression 그림 (6) 추가)
+<p align="center">
+  <img src="/picture/linear_model.png">
+  그림 (7) Linear Model Regression
+</p>
 
 파란 선은 Posterior 분포를 이용해서 구했던 $w_1, w_2$를 적용한 Linear Model을 그린 것이다.   
 빨간 선은 기존의 데이터를 기반으로 새로운 데이터(-5~5)가 입력되었을 때 그에 대한 결과의 평균 값이다.    
