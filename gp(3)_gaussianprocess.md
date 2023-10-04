@@ -250,7 +250,6 @@ xlabel('input, x');
 ylabel('output, f(x)');
 ```
 
-(GP Posterior 그림 (3) 추가)
 <p align="center">
   <img src="/picture/gp_posterior.png"/>   
   그림 (3) GP Posterior 분포
@@ -302,7 +301,7 @@ ylabel('Covariance');
 ```
 
 <p align="center">
-  <img src="/picture/2d_gp_posterior_cov(2).png"/>   
+  <img src="/picture/2d_gp_posterior_cov.png"/>   
   그림 (6) GP Posterior Covariance 2D 분포
 </p> 
 
