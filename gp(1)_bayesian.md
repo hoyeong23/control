@@ -55,6 +55,7 @@ Posterior Probability은 기존에 존재했던 사건 A로 계산된 Prior Prob
 
 수식으로 위 분포에 대해서 이해해보자.
 
+***
    
 ### 1. Prior Probability
 
@@ -74,18 +75,21 @@ $\mathbf{w}$는 다변수 정규분포를 따르는 벡터라고 가정하자.
 
 $$p(\mathbf{w}) = \frac{exp(-\frac{1}{2}\mathbf{w}^T \Sigma^{-1}_p\mathbf{w})}{\sqrt{(2\pi)^k |\Sigma_p|}} \qquad (4)$$
 
+***
+
 ### 2. Likelihood
 바로 위에서 정의한 Likelihood는 아래와 같이 나타낼 수 있다.   
-$$ p(\mathbf{y}|X, \mathbf{w})=\prod_{i=1}^n p(y_i|\mathbf{x}_i, \mathbf{w})=\prod_{i=1}^n \frac{1}{\sqrt{2\pi}\sigma_n}exp(-\frac{(y_i - \mathbf{x}_i^T\mathbf{w})^2}{2\sigma_n^2}) $$   
+$$p(\mathbf{y}|X, \mathbf{w})=\prod_{i=1}^n p(y_i|\mathbf{x}_i, \mathbf{w})= \prod _{i=1}^n \frac{1}{\sqrt{2\pi}\sigma_n}exp(-\frac{(y_i - \mathbf{x}_i^T\mathbf{w})^2}{2\sigma_n^2})$$
+
 $$=\frac{1}{(2\pi\sigma_n^2)^{n/2}}exp(-\frac{1}{2\sigma_n^2}|\mathbf{y}-X^T \mathbf{w}|^2)=\mathcal{N}(X^T\mathbf{w}, \sigma_n^2I) \qquad (5)$$
 위 수식을 간단히 설명해보자면 다음과 같다.  
-
 >한 쌍의 parameter인 $\mathbf{w}$에 대한 Likelihood의 값은 모든 $\mathbf{x, y}$ 쌍에 대한 Likelihood의 합과 같다.
 
 Likelihood는 확률이라기보다 데이터와 분포 사이의 적합도로 볼 수 있다.  
+   
 하나의 예시를 간단히 들어보겠다.  
-평균이 각각 0(분포 1)과 100(분포 2)인 분포 2개가 있다고 가정하자. (분산은 같다.)
-둘 중에 임의로 선택한 분포에서 추출된 데이터가 [-1, 0, 1, 0, 0.5]라고 하자.
+평균이 각각 0(분포 1)과 100(분포 2)인 분포 2개가 있다고 가정하자. (분산은 같다.)   
+둘 중에 임의로 선택한 분포에서 추출된 데이터가 [-1, 0, 1, 0, 0.5]라고 하자.   
 그럼 해당 데이터는 분포 1, 2 중에 어느 분포에서 추출되었을 확률이 높은가?  
 단순히 생각해보면 분포 1에서 추출되었을 확률이 높다.  
 즉, 해당 데이터는 분포 2보다 분포 1과의 Likelihood가 높은 것이다.  
@@ -100,6 +104,8 @@ $$p(\mathbf{y}|X)=\int{p(\mathbf{y}|X, \mathbf{w})p(\mathbf{w})d\mathbf{w}} \qqu
 
 이 식은 $\mathbf{w}$와 independent하며, Posterior Probability 관점에서 봤을 때는 단순히 상수에 불과하다.  
 Posterior Probability 기준에서는 $\mathbf{w}$에 dependent한 요소만 변수로 보기 때문이다.
+
+***
 
 ### 3. Posterior Probability
 Bayesian 추론에서 가장 중요하다고 볼 수 있는 Posterior Probability(사후 확률)이다.  
