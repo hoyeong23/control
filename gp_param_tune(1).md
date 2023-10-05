@@ -101,7 +101,8 @@ sigma_f(max_j)
 ```
 
 <p align="center">
-  <img src="/picture/3d_log_likelihood.png"/>   
+  <img src="/picture/3d_log_likelihood.png"/>
+  
   그림 (1) 3D Log Likelihood 분포
 </p>
 
